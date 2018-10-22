@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+  	"clean": "rm -rf node_modules",
+    "start": "node app",
     "test": "jest"
   },
   "repository": {

@@ -15,7 +15,7 @@ app.use("/api", api);
 
 // For any other route (URL) just send an error
 app.get("*", (req, res) => {
-  res.send({ error: "No route defined" });
+  res.sendFile(__dirname + '/dist/index.html');
 });
 
 module.exports = app;

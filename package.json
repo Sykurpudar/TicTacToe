@@ -7,7 +7,7 @@
     "build": "webpack",
     "start": "node server",
     "test": "jest",
-    "dev-server" : "webpack-dev-server --open"
+    "dev-server": "webpack-dev-server --open"
   },
   "repository": {
     "type": "git",

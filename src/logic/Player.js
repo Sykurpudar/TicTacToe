@@ -3,7 +3,7 @@ class Player {
 	constructor(player, myTurn)
 	{
 		this.player = player;
-		this.myTurn = parseInt(myTurn);
+		this.myTurn = myTurn;
 	}
 }
 

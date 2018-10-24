@@ -10,7 +10,18 @@ class Board{
 	}
 
 	setValue(location, value){
-		this.grid[location] = value;
+		if(this.isEmpty(location)){
+			this.grid[location] = value;
+		}
+	}
+
+	isEmpty(location){
+		if(this.grid[location] == ''){
+			return true;
+		}
+		else{
+			return false;
+		}
 	}
 }
 

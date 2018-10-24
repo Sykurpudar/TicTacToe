@@ -24,3 +24,10 @@ test("Insert value O at location 0 and check value", () => {
 	testBoard.setValue(0, 'O');
 	expect(testBoard.getValue(0)).toBe('O');
 });
+
+test("Cant change value at already used location", () => {
+	const testBoard = new Board();
+	testBoard.setValue(3, 'X');
+	testBoard.setValue(3, 'O');
+	expect(testBoard.getValue(3)).toBe('X');
+});

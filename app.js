@@ -14,8 +14,18 @@ const api = require("./src/server/api");
 app.use("/api", api);
 
 // For any other route (URL) just send an error
-app.get("*", (req, res) => {
+/*
+app.get("/*", (req, res) => {
   res.sendFile(__dirname + '/dist/index.html');
 });
+*/
+
+//app.set('appPath', 'public');
+app.use(express.static(__dirname +'/dist'));
+
+app.route('/*')
+  .get(function(req, res) {
+    res.sendFile(__dirname +'/dist' + '/index.html');
+  });
 
 module.exports = app;

@@ -1,5 +1,11 @@
-function game(name) {
-	return ("Hello, " + name + "!");
+const Player = require("./Player");
+
+class Game {
+	constructor(playerX, playerO, currentPlayer) {
+		this.playerX = playerX;
+		this.playerO = playerO;
+		this.currentPlayer = currentPlayer;
+  }
 }
 
-module.exports = game;
+module.exports = Game;

@@ -37,5 +37,13 @@ module.exports = {
         title: 'Greeting page',
         template : 'src/client/index.html'
     })
-  ]
-}
+  ],
+  module: {
+      rules: [
+      {
+        test: /\.css$/,
+        use: ['css-loader' ]
+      }
+    ]
+  }
+};

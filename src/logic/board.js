@@ -10,12 +10,12 @@ class Board{
 	}
 
 	setValue(location, value){
-		if(this.isEmpty(location)){
+		if(this.isAvalible(location)){
 			this.grid[location] = value;
 		}
 	}
 
-	isEmpty(location){
+	isAvalible(location){
 		if(this.grid[location] == ''){
 			return true;
 		}

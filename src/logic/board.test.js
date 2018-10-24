@@ -39,10 +39,22 @@ test("Check if board is filled out", () => {
 	}
 	expect(testBoard.isFull()).toBe(true);
 });
+
 test("Check if board is filled out", () => {
 	const testBoard = new Board();
 	testBoard.setValue(0, 'X');
 	testBoard.setValue(1, 'O');
 	testBoard.setValue(2, 'X');
 	expect(testBoard.isFull()).toBe(false);
-})
+});
+
+test("Check if unused area is avalible", () => {
+	const testBoard = new Board();
+	expect(testBoard.isAvalible(0)).toBe(true);
+});
+
+test("Check if used area is avalible", () => {
+	const testBoard = new Board();
+	testBoard.setValue(0, 'X');
+	expect(testBoard.isAvalible(0)).toBe(false);
+});

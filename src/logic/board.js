@@ -23,6 +23,15 @@ class Board{
 			return false;
 		}
 	}
+
+	isFull(){
+		for(var i = 0; i < 9; i++){
+			if(this.getValue(i) == ''){
+				return false;
+			}
+		}
+		return true;
+	}
 }
 
 module.exports = Board;

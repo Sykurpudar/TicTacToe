@@ -31,3 +31,18 @@ test("Cant change value at already used location", () => {
 	testBoard.setValue(3, 'O');
 	expect(testBoard.getValue(3)).toBe('X');
 });
+
+test("Check if board is filled out", () => {
+	const testBoard = new Board();
+	for(var i = 0; i < 9; i++){
+		testBoard.setValue(i, 'X');
+	}
+	expect(testBoard.isFull()).toBe(true);
+});
+test("Check if board is filled out", () => {
+	const testBoard = new Board();
+	testBoard.setValue(0, 'X');
+	testBoard.setValue(1, 'O');
+	testBoard.setValue(2, 'X');
+	expect(testBoard.isFull()).toBe(false);
+})

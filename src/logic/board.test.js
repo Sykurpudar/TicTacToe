@@ -1,6 +1,6 @@
 //board.test.js
 
-const Board = require('./Board');
+const Board = require('./board.js');
 
 test("Creates a new Board object", () => {
 	const testBoard = new Board();

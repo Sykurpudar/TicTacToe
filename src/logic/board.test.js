@@ -7,3 +7,8 @@ test("Creates a new Board object", () => {
 	var grid = ['','','','','','','','',''];
 	expect(testBoard.grid).toEqual(grid);
 });
+
+test("Check value at location 2 before insert", () => {
+	const testBoard = new Board();
+	expect(testBoard.getValue(2)).toBe('');
+});

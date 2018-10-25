@@ -1,6 +1,8 @@
 //index.js
 "use strict";
 
+const Game = require("../logic/game.js");
+/*
 const _ = require("lodash");
 
 function component() {
@@ -10,4 +12,21 @@ function component() {
 }
 
 document.body.appendChild(component());
+*/
 
+//returns all elements with class square
+function getHTMLgrid(){
+	var squares = document.querySelectorAll('[class*="square"]');
+	return squares;
+}
+
+
+/*
+	Main function for our game logic
+*/
+
+//while(!game.isOver()){
+	const currentGame = new Game('X','O','X');
+	currentGame.makeMove(getHTMLgrid());
+	
+//}

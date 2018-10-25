@@ -14,7 +14,7 @@ class Board{
 		    [0,3,6],
 		    [1,4,7],
 		    [2,5,8],
-		    //diagonal winning lines 
+		    //diagonal winning lines
 		    [0,4,8],
 		    [2,4,6],
 		  ];
@@ -47,9 +47,13 @@ class Board{
 		for (var i = this.winningTrios.length - 1; i >= 0; i--) {
 			var trio = this.winningTrios[i]
 			if(	this.grid[trio[0]] === this.grid[trio[1]] && this.grid[trio[0]] === this.grid[trio[2]]){
-				return true;
+				if(this.grid[trio[0]] == "")	{
+					//Continue with for loop
+				}
+				else {
+					return true;
+				}
 			}
-			
 		}
 		return false;
 	}

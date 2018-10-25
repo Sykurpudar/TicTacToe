@@ -95,4 +95,15 @@ test("Check if diagonal lines produce a winning trio", () => {
 	expect(testBoard.hasWinningTrio()).toBe(true);
 });
 
+test("Check if empty board produces a winning trio", () => {
+	const testBoard = new Board();
+	expect(testBoard.hasWinningTrio()).toBe(false);
+});
 
+test("Check if has winning trio returns false when grid contains empty lines", () => {
+	const testBoard = new Board();
+	testBoard.setValue(0, 'X');
+	testBoard.setValue(1, 'O');
+	testBoard.setValue(2, 'X');
+	expect(testBoard.hasWinningTrio()).toBe(false);
+});

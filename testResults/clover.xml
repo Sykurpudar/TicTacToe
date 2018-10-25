@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1540490611266" clover="3.2.0">
+  <project timestamp="1540490611266" name="All files">
+    <metrics statements="37" coveredstatements="34" conditionals="10" coveredconditionals="10" methods="11" coveredmethods="9" elements="58" coveredelements="53" complexity="0" loc="37" ncloc="37" packages="2" files="4" classes="4">
+      <package name="logic">
+        <metrics statements="27" coveredstatements="26" conditionals="10" coveredconditionals="10" methods="9" coveredmethods="8"/>
+        <file name="board.js" path="/Users/thordur/Documents/HR/hugb_short/TicTacToe/src/logic/board.js">
+          <metrics statements="18" coveredstatements="18" conditionals="10" coveredconditionals="10" methods="6" coveredmethods="6"/>
+          <line num="6" count="13" type="stmt"/>
+          <line num="8" count="13" type="stmt"/>
+          <line num="24" count="17" type="stmt"/>
+          <line num="28" count="31" type="cond" truecount="2" falsecount="0"/>
+          <line num="29" count="30" type="stmt"/>
+          <line num="34" count="33" type="cond" truecount="2" falsecount="0"/>
+          <line num="35" count="31" type="stmt"/>
+          <line num="38" count="2" type="stmt"/>
+          <line num="44" count="4" type="stmt"/>
+          <line num="45" count="19" type="stmt"/>
+          <line num="46" count="19" type="cond" truecount="4" falsecount="0"/>
+          <line num="47" count="3" type="stmt"/>
+          <line num="51" count="1" type="stmt"/>
+          <line num="55" count="2" type="stmt"/>
+          <line num="56" count="13" type="cond" truecount="2" falsecount="0"/>
+          <line num="57" count="1" type="stmt"/>
+          <line num="60" count="1" type="stmt"/>
+          <line num="64" count="1" type="stmt"/>
+        </file>
+        <file name="game.js" path="/Users/thordur/Documents/HR/hugb_short/TicTacToe/src/logic/game.js">
+          <metrics statements="6" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+          <line num="4" count="2" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="10" count="1" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="15" count="0" type="stmt"/>
+          <line num="19" count="2" type="stmt"/>
+        </file>
+        <file name="player.js" path="/Users/thordur/Documents/HR/hugb_short/TicTacToe/src/logic/player.js">
+          <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="8" count="1" type="stmt"/>
+          <line num="9" count="1" type="stmt"/>
+          <line num="13" count="3" type="stmt"/>
+        </file>
+      </package>
+      <package name="server">
+        <metrics statements="10" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+        <file name="api.js" path="/Users/thordur/Documents/HR/hugb_short/TicTacToe/src/server/api.js">
+          <metrics statements="10" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="1"/>
+          <line num="2" count="1" type="stmt"/>
+          <line num="3" count="1" type="stmt"/>
+          <line num="4" count="1" type="stmt"/>
+          <line num="6" count="1" type="stmt"/>
+          <line num="7" count="2" type="stmt"/>
+          <line num="8" count="2" type="stmt"/>
+          <line num="11" count="1" type="stmt"/>
+          <line num="12" count="0" type="stmt"/>
+          <line num="13" count="0" type="stmt"/>
+          <line num="16" count="1" type="stmt"/>
+        </file>
+      </package>
+    </metrics>
+  </project>
+</coverage>

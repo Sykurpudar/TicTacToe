@@ -1,4 +1,5 @@
 //board.js
+"use strict";
 
 class Board{
 	constructor(){

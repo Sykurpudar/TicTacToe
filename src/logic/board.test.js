@@ -59,3 +59,29 @@ test("Check if used area is avalible", () => {
 	testBoard.setValue(0, 'X');
 	expect(testBoard.isAvalible(0)).toBe(false);
 });
+
+test("Check if horizontal lines produce a winning trio", () => {
+	const testBoard = new Board();
+	testBoard.setValue(3, 'X');
+	testBoard.setValue(4, 'X');
+	testBoard.setValue(5, 'X');
+	expect(testBoard.hasWinnigTrio()).toBe(true);
+});
+
+test("Check if vertical lines produce a winning trio", () => {
+	const testBoard = new Board();
+	testBoard.setValue(1, 'X');
+	testBoard.setValue(4, 'X');
+	testBoard.setValue(7, 'X');
+	expect(testBoard.hasWinnigTrio()).toBe(true);
+});
+
+test("Check if diagonal lines produce a winning trio", () => {
+	const testBoard = new Board();
+	testBoard.setValue(0, 'X');
+	testBoard.setValue(4, 'X');
+	testBoard.setValue(8, 'X');
+	expect(testBoard.hasWinnigTrio()).toBe(true);
+});
+
+

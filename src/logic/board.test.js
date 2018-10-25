@@ -1,4 +1,5 @@
 //board.test.js
+"use strict";
 
 const Board = require('./board.js');
 

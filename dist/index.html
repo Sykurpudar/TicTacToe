@@ -2,25 +2,41 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Greeting page</title>
+		<title>Greeting page</title>
+		<!-- Version for static dist cleanup manipulation		-->
+		<link rel="stylesheet" href="styles.css">
+
+		<!-- Version for dynamic css-loader injection
+			 Does not work on production						-->
+		<link rel="stylesheet" href="./src/client/styles.css">
   </head>
   <body>
-  	<div class="game">
-  		<!-- first row -->
-  		<div></div>
-  		<div></div>
-  		<div></div>
-
-  		<!-- second row -->
-  		<div></div>
-  		<div></div>
-  		<div></div>
-
-  		<!-- thrid row -->
-  		<div></div>
-  		<div></div>
-  		<div></div>
-
-  	</div>
+  	<div class="board">
+			<div class="turn">X, it's your turn!</div>
+			<div class="game">
+				<div class="row toprow">
+					<div class="square top left"></div>
+					<div class="square top midcol"></div>
+					<div class="square top right"></div>
+				</div>
+				<div class="row middlerow">
+					<div class="square middle left"></div>
+					<div class="square middle midcol"></div>
+					<div class="square middle right"></div>
+				</div>
+				<div class="row bottomrow">
+					<div class="square bottom left "></div>
+					<div class="square bottom midcol"></div>
+					<div class="square bottom right" ></div>
+				</div>
+			</div>
+			<div>
+				<button type="button" class="play-again">Play again</button>
+			</div>
+			<div class="score">
+				<p>X has <span>0</span> points!</p>
+				<p>O has <span>0</span> points!</p>
+			</div>
+		</div>
   <script type="text/javascript" src="main.js"></script></body>
 </html>

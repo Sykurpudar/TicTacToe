@@ -1,4 +1,7 @@
-const Game = require('./game');
+//game.test.js
+"use strict";
+
+const Game = require('./game.js');
 
 it('Game constructor sets the correct values', () => {
   const obj = new Game('X', 'O', 'X');

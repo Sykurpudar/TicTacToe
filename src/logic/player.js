@@ -1,3 +1,6 @@
+//player.js
+"use strict";
+
 class Player {
 
 	constructor(player, myTurn)

@@ -1,4 +1,7 @@
-const Player = require("./Player");
+//game.js
+"use strict";
+
+const Player = require("./player.js");
 
 class Game {
 	constructor(playerX, playerO, currentPlayer) {

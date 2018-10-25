@@ -13,7 +13,7 @@ let pathsToClean = [
 // the clean options to use
 let cleanOptions = {
   root:     '/full/webpack/root/path',
-  exclude:  ['shared.js'],
+  exclude:  ['shared.js', 'styles.css'],
   verbose:  true,
   dry:      false
 }

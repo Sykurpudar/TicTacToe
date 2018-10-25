@@ -1,4 +1,7 @@
-const Player = require("./Player");
+//player.test.js
+"use strict";
+
+const Player = require("./player.js");
 
 
 it('Player constructor sets the correct values', () => {

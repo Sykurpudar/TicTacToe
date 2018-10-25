@@ -51,13 +51,13 @@ test("Check if board is filled out", () => {
 
 test("Check if unused area is avalible", () => {
 	const testBoard = new Board();
-	expect(testBoard.isAvalible(0)).toBe(true);
+	expect(testBoard.isAvailable(0)).toBe(true);
 });
 
 test("Check if used area is avalible", () => {
 	const testBoard = new Board();
 	testBoard.setValue(0, 'X');
-	expect(testBoard.isAvalible(0)).toBe(false);
+	expect(testBoard.isAvailable(0)).toBe(false);
 });
 
 test("Check if horizontal lines produce a winning trio", () => {

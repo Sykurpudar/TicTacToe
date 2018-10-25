@@ -26,14 +26,13 @@ class Board{
 
 	setValue(location, value){
 		this.grid[location] = value;
-		this.draw(location, value);
 	}
 
 	draw(location, value) {
 		document.getElementById(location).innerHTML = value;
 	}
 
-	isAvalible(location){
+	isAvailable(location){
 		if(this.grid[location] === ''){
 			return true;
 		}

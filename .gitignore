@@ -3,3 +3,7 @@
 /dist/index.html
 /dist/main.js
 /testResults/
+
+/public/testResults/
+/public/index.html
+/public/main.js

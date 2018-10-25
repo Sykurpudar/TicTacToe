@@ -25,9 +25,12 @@ class Board{
 	}
 
 	setValue(location, value){
-		if(this.isAvalible(location)){
-			this.grid[location] = value;
-		}
+		this.grid[location] = value;
+		this.draw(location, value);
+	}
+
+	draw(location, value) {
+		document.getElementById(location).innerHTML = value;
 	}
 
 	isAvalible(location){

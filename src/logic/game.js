@@ -10,11 +10,18 @@ class Game {
 		this.playerX = new Player();
 		this.playerO = new Player();
 		this.board = new Board();
+		this.round = 1;
 	}
 
-  	makeMove(HTMLgrid){
-  		HTMLgrid[4].innerHTML = 'k';
-  	}
+	xTurn() {
+		if((this.round) % 2 == 1){
+			return true;
+		}
+		else{
+			false;
+		}
+	}
+
 }
 
 module.exports = Game;

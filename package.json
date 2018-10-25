@@ -9,6 +9,11 @@
     "test": "jest",
     "dev-server": "webpack-dev-server --open"
   },
+  "jest": {
+    "verbose" : true,
+    "collectCoverage" : true,
+    "coverageDirectory" : "./testResults/"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Sykurpudar/TicTacToe.git"

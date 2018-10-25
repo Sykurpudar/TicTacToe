@@ -40,11 +40,13 @@ class Board{
 	}
 
 	hasWinningTrio(){
-		for (var i = winningTrios.length - 1; i >= 0; i--) {
-			var trio = winningTrios[i]
-			if(	trio[0] === trio[1] && trio[0] === tiro[2]){
+
+		for (var i = this.winningTrios.length - 1; i >= 0; i--) {
+			var trio = this.winningTrios[i]
+			if(	this.grid[trio[0]] === this.grid[trio[1]] && this.grid[trio[0]] === this.grid[trio[2]]){
 				return true;
-			}	
+			}
+			
 		}
 		return false;
 	}

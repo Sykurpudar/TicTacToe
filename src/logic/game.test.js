@@ -17,8 +17,15 @@ test("Check to see if playerx does not start on round 2", () => {
 	expect(testGame.xTurn()).toBeFalsy();
 });
 
-it('empty test to justify file', () => {
-  
-  expect(true).toBe(true);
+test("Check if makes move on index 1 changes board value to X", () => {
+	const testGame = new Game();
+	testGame.makeMove(1);
+	expect(testGame.board.getValue(1)).toMatch("X");
 });
 
+test("Check if makes move on index 2 changes board value to O", () => {
+	const testGame = new Game();
+	testGame.round = 4;
+	testGame.makeMove(2);
+	expect(testGame.board.getValue(2)).toMatch("O");
+});

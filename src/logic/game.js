@@ -12,7 +12,7 @@ class Game {
   	}
 
   	makeMove(HTMLgrid){
-  		HTMLgrid[4].innerHTML = 'Nice';
+  		HTMLgrid[4].innerHTML = 'k';
   	}
 }
 

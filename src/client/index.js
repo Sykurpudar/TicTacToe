@@ -28,5 +28,5 @@ function getHTMLgrid(){
 //while(!game.isOver()){
 	const currentGame = new Game('X','O','X');
 	currentGame.makeMove(getHTMLgrid());
-
+	
 //}

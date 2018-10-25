@@ -25,13 +25,17 @@ class Game {
 	makeMove(index){
 		if(this.board.isAvailable(index)){
 			if(this.xTurn()){
-  	 		this.board.setValue(index, "X");
+  	 			this.board.setValue(index, "X");
 	  		}
 	  		else{
 	  			this.board.setValue(index, "O");
 	  		}
 			this.round = this.round + 1;
 		} 		
+	}
+
+	hasWon() {
+		return this.board.hasWinningTrio();
 	}
 
 }

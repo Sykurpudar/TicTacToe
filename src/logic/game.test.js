@@ -29,3 +29,21 @@ test("Check if makes move on index 2 changes board value to O", () => {
 	testGame.makeMove(2);
 	expect(testGame.board.getValue(2)).toMatch("O");
 });
+
+test("Checks if the game has been won on empty grid", () => {
+	const testGame = new Game();
+	testGame.board.grid = ['','','','','','','','',''];
+	expect(testGame.hasWon()).toBeFalsy();
+});
+
+test("Checks if the game has been won", () => {
+	const testGame = new Game();
+	testGame.board.grid = ['X','X','X','O','O','','','',''];
+	expect(testGame.hasWon()).toBeTruthy();
+});
+
+test("Checks if the game has not been won", () => {
+	const testGame = new Game();
+	testGame.board.grid = ['O','O','X','X','X','O','O','X','X'];
+	expect(testGame.hasWon()).toBeFalsy();
+});

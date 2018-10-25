@@ -29,7 +29,8 @@ class Board{
 	}
 
 	draw(location, value) {
-		document.getElementById(location).innerHTML = value;
+		console.log("printing out value: ----------" + value);
+		document.getElementById(location).innerHTML = toString(value);
 	}
 
 	isAvailable(location){

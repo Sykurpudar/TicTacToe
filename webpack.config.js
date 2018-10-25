@@ -1,3 +1,5 @@
+//webpack.config.js
+
 const path = require('path');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var CleanWebpackPlugin = require('clean-webpack-plugin')
@@ -6,7 +8,7 @@ var CleanWebpackPlugin = require('clean-webpack-plugin')
 
 // the path(s) that should be cleaned
 let pathsToClean = [
-  'dist',
+  'public',
   'build'
 ]
 
@@ -22,7 +24,7 @@ module.exports = {
   entry: './src/client/index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'public')
   },
   devServer: {
     port: 8080,

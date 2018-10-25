@@ -12,7 +12,7 @@
   "jest": {
     "verbose" : true,
     "collectCoverage" : true,
-    "coverageDirectory" : "./testResults/"
+    "coverageDirectory" : "./public/testResults/"
   },
   "repository": {
     "type": "git",

@@ -27,6 +27,27 @@ function getHTMLgrid(){
 
 //while(!game.isOver()){
 	const currentGame = new Game('X','O','X');
-	currentGame.makeMove(getHTMLgrid());
+
+var squares = getHTMLgrid();
+var makeMove = function() {
+	var id = this.getAttribute("id");
+	currentGame.makeMove(id);
+};
+
+for (var i = 0; i < squares.length; i++) {
+	squares[i].addEventListener('click', makeMove, false);
+}
+
+
+/*
+for (var i = 0; i < squares.length; i++) {
+	squares[i].addEventListener('click', makeMove, false);
+}
+
+function makeMove() {
+	this.
+}
+*/
+
 	
 //}

@@ -11,12 +11,18 @@ class Board{
 	}
 
 	setValue(location, value){
-		if(this.isAvalible(location)){
 			this.grid[location] = value;
-		}
+			this.draw(location, value);
 	}
 
-	isAvalible(location){
+	draw(location, value) {
+		//for (var i = 0; i < 9; i++) {
+			document.getElementById(location).innerHTML = value;
+		
+	}
+
+
+	isAvailible(location){
 		if(this.grid[location] == ''){
 			return true;
 		}
@@ -33,6 +39,7 @@ class Board{
 		}
 		return true;
 	}
+
 }
 
 module.exports = Board;

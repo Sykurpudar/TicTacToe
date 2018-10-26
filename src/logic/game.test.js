@@ -47,3 +47,31 @@ test("Checks if the game has not been won", () => {
 	testGame.board.grid = ['O','O','X','X','X','O','O','X','X'];
 	expect(testGame.hasWon()).toBeFalsy();
 });
+
+test("Checks if games ends in draw", () => {
+	const testGame = new Game();
+	testGame.round = 10;
+	testGame.board.grid = ['O','O','X','X','X','O','O','X','X'];
+	expect(testGame.checkForDraw()).toBeTruthy();
+});
+
+test("Checks if games dose not end in draw", () => {
+	const testGame = new Game();
+	testGame.round = 10;
+	testGame.board.grid = ['O','X','O','X','O','O','X','X','X'];
+	expect(testGame.checkForDraw()).toBeFalsy();
+});
+
+test("Checks if game ends in draw", () => {
+	const testGame = new Game();
+	testGame.makeMove(2);
+  testGame.makeMove(1);
+	testGame.makeMove(4);
+	testGame.makeMove(0);
+	testGame.makeMove(8);
+	testGame.makeMove(5);
+	testGame.makeMove(3);
+	testGame.makeMove(6);
+	testGame.makeMove(7);
+	expect(testGame.checkForDraw()).toBeTruthy();
+});

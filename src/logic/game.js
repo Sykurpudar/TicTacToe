@@ -31,11 +31,18 @@ class Game {
 	  			this.board.setValue(index, "O");
 	  		}
 			this.round = this.round + 1;
-		} 		
+		}
 	}
 
 	hasWon() {
 		return this.board.hasWinningTrio();
+	}
+
+	checkForDraw() {
+		if((this.round === 10) && (this.board.hasWinningTrio() === false)) {
+			return true;
+		}
+		return false;
 	}
 
 }

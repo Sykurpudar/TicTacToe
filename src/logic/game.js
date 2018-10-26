@@ -10,11 +10,11 @@ class Game {
 		this.playerX = new Player();
 		this.playerO = new Player();
 		this.board = new Board();
-		this.round = 1;
+		this.round = 0;
 	}
 
 	xTurn() {
-		if((this.round) % 2 == 1){
+		if((this.round) % 2 == 0){
 			return true;
 		}
 		else{
@@ -39,7 +39,7 @@ class Game {
 	}
 
 	checkForDraw() {
-		if((this.round === 10) && (this.board.hasWinningTrio() === false)) {
+		if((this.round === 9) && (this.board.hasWinningTrio() === false)) {
 			return true;
 		}
 		return false;

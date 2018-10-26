@@ -28,7 +28,7 @@ class Board{
 		this.grid[location] = value;
 	}
 
-	draw(location, value) {
+	addToBoard(location, value) {
 		console.log("printing out value: ----------" + value);
 		document.getElementById(location).innerHTML = toString(value);
 	}

@@ -58,6 +58,7 @@ There's two ways to build our project
 
 - Running a production-like server
 - - run `npm start`
+- - open `localhost:8080` in a browser of your choice
 
 - Running a development server
 - - run `npm dev-server`
@@ -67,6 +68,8 @@ There's two ways to build our project
 This repository uses the [Jest][jest] testing framework and the [Puppeteer][puppeteer] library for writing automated acceptance tests for services.
 
 Running all tests for both frameworks can be done with `npm test`
+This automatically creates a fresh code coverage test report, saved in `public/testResults/lcov-report/`
+It is visible via the url `localhost:8080/test` if the server is running.
 
 ### Writing tests
 - Test files are located under the `src/logic/` folder.

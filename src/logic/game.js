@@ -14,11 +14,20 @@ class Game {
 	}
 
 	xTurn() {
-		if((this.round) % 2 == 0){
+		if((this.round) % 2 === 0){
 			return true;
 		}
 		else{
 			false;
+		}
+	}
+
+	getCurrentPlayer() {
+		if(this.xTurn()) {
+			return "X";
+		}
+		else {
+			return "O";
 		}
 	}
 

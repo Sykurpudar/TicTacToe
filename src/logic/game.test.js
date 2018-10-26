@@ -75,3 +75,15 @@ test("Checks if game ends in draw", () => {
 	testGame.makeMove(7);
 	expect(testGame.checkForDraw()).toBeTruthy();
 });
+
+test("Checks if current player is X when round is 2", () => {
+	const testGame = new Game();
+	testGame.round = 2;
+	expect(testGame.getCurrentPlayer()).toBe("X");
+});
+
+test("Checks if current player is O when round is 3", () => {
+	const testGame = new Game();
+	testGame.round = 3;
+	expect(testGame.getCurrentPlayer()).toBe("O");
+});

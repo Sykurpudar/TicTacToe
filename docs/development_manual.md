@@ -22,7 +22,6 @@ Packaging tools
 - - HTML-Webpack-Plugin
 - - Clean-Webpack-Plugin
 - [CSS-loader][css-loader]
-- Lodash NOT BEING USED
 
 Test frameworks
 - [Jest][jest]

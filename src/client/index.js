@@ -20,7 +20,6 @@ function getHTMLgrid(){
 	return squares;
 }
 
-
 /*
 	Main function for our game logic
 */
@@ -38,17 +37,3 @@ var makeMove = function() {
 for (var i = 0; i < squares.length; i++) {
 	squares[i].addEventListener('click', makeMove, false);
 }
-
-
-/*
-for (var i = 0; i < squares.length; i++) {
-	squares[i].addEventListener('click', makeMove, false);
-}
-
-function makeMove() {
-	this.
-}
-*/
-
-	
-//}

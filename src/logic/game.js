@@ -44,7 +44,6 @@ class Game {
 		}
 		return false;
 	}
-
 }
 
 module.exports = Game;

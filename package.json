@@ -10,9 +10,9 @@
     "dev-server": "webpack-dev-server --open"
   },
   "jest": {
-    "verbose" : true,
-    "collectCoverage" : true,
-    "coverageDirectory" : "./public/testResults/"
+    "verbose": true,
+    "collectCoverage": true,
+    "coverageDirectory": "./public/testResults/"
   },
   "repository": {
     "type": "git",
@@ -35,8 +35,7 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
-    "express": "^4.16.4",
-    "lodash": "^4.17.11"
+    "express": "^4.16.4"
   },
   "description": ""
 }

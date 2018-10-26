@@ -19,5 +19,4 @@ The game was designed to be very simple and easy to navigate.
 In the class diagram in figure 1 all classes of the system are demonstrated with their attributes and functions.
 The focus of the design was that the code should be very clear and loosely coupled.
 
-
-![Image](tictactoeclassdiagram.png "klasarit")
+![Image](./tictactoeclassdiagr.png "tictactoeclassdiagram") 

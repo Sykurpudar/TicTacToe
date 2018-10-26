@@ -15,7 +15,7 @@ document.body.appendChild(component());
 */
 
 //returns all elements with class square
-function getHTMLgrid(){
+function getHTMLgrid() {
 	var squares = document.getElementsByClassName("square");
 	return squares;
 }
@@ -23,17 +23,24 @@ function getHTMLgrid(){
 /*
 	Main function for our game logic
 */
-
-//while(!game.isOver()){
 const currentGame = new Game('X','O');
 
-var squares = getHTMLgrid();
-var makeMove = function() {
-	var id = this.getAttribute("id");
-	console.log(id);
-	currentGame.makeMove(id);
-};
+//while(!currentGame.hasWon() || !currentGame.checkForDraw()) {
+	
+	var squares = getHTMLgrid();
+	var getMove = function() {
+		var id = this.getAttribute("id");
+		var player = currentGame.getCurrentPlayer();
 
-for (var i = 0; i < squares.length; i++) {
-	squares[i].addEventListener('click', makeMove, false);
-}
+		console.log(id);
+		if(currentGame.board.isAvailable(id)) {
+			currentGame.makeMove(id);
+			currentGame.board.updateBoard(id, player);
+		}
+	};
+
+	for (var i = 0; i < squares.length; i++) {
+		squares[i].addEventListener('click', getMove, false);
+	}
+
+//}

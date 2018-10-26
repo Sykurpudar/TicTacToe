@@ -25,7 +25,7 @@ test("Insert value O at location 0 and check value", () => {
 	testBoard.setValue(0, 'O');
 	expect(testBoard.getValue(0)).toBe('O');
 });
-
+/*
 test("Check if board is filled out", () => {
 	const testBoard = new Board();
 	for(var i = 0; i < 9; i++){
@@ -41,7 +41,7 @@ test("Check if board is filled out", () => {
 	testBoard.setValue(2, 'X');
 	expect(testBoard.isFull()).toBe(false);
 });
-
+*/
 test("Check if unused area is avalible", () => {
 	const testBoard = new Board();
 	expect(testBoard.isAvailable(0)).toBe(true);

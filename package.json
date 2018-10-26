@@ -5,6 +5,7 @@
   "scripts": {
     "clean": "rm -rf node_modules",
     "build": "webpack",
+    "heroku-postbuild": "webpack -p",
     "start": "node server",
     "test": "jest",
     "dev-server": "webpack-dev-server --open"

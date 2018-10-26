@@ -2,10 +2,48 @@
 "use strict";
 
 const Game = require('./game.js');
-
+/*
 it('Game constructor sets the correct values', () => {
-  const obj = new Game('X', 'O', 'X');
-  expect(obj.playerX).toMatch('X');
-	expect(obj.playerO).toMatch('O');
-  expect(obj.currentPlayer).toMatch('X');
+  const obj = new Game('X', 'O');
+ 	expect(toString(obj.playerX)).toMatch('X');
+	expect(toString(obj.playerO)).toMatch('O');
+	var grid = ['','','','','','','','',''];
+	expect(obj.board.grid).toEqual(grid);
+});
+*/
+test("Check to see if playerx does not start on round 2", () => {
+	const testGame = new Game();
+	testGame.round = 2;
+	expect(testGame.xTurn()).toBeFalsy();
+});
+
+test("Check if makes move on index 1 changes board value to X", () => {
+	const testGame = new Game();
+	testGame.makeMove(1);
+	expect(testGame.board.getValue(1)).toMatch("X");
+});
+
+test("Check if makes move on index 2 changes board value to O", () => {
+	const testGame = new Game();
+	testGame.round = 4;
+	testGame.makeMove(2);
+	expect(testGame.board.getValue(2)).toMatch("O");
+});
+
+test("Checks if the game has been won on empty grid", () => {
+	const testGame = new Game();
+	testGame.board.grid = ['','','','','','','','',''];
+	expect(testGame.hasWon()).toBeFalsy();
+});
+
+test("Checks if the game has been won", () => {
+	const testGame = new Game();
+	testGame.board.grid = ['X','X','X','O','O','','','',''];
+	expect(testGame.hasWon()).toBeTruthy();
+});
+
+test("Checks if the game has not been won", () => {
+	const testGame = new Game();
+	testGame.board.grid = ['O','O','X','X','X','O','O','X','X'];
+	expect(testGame.hasWon()).toBeFalsy();
 });

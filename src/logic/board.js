@@ -25,12 +25,15 @@ class Board{
 	}
 
 	setValue(location, value){
-		if(this.isAvalible(location)){
-			this.grid[location] = value;
-		}
+		this.grid[location] = value;
 	}
 
-	isAvalible(location){
+	draw(location, value) {
+		console.log("printing out value: ----------" + value);
+		document.getElementById(location).innerHTML = toString(value);
+	}
+
+	isAvailable(location){
 		if(this.grid[location] === ''){
 			return true;
 		}

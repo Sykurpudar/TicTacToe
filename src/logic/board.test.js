@@ -26,12 +26,6 @@ test("Insert value O at location 0 and check value", () => {
 	expect(testBoard.getValue(0)).toBe('O');
 });
 
-test("Cant change value at already used location", () => {
-	const testBoard = new Board();
-	testBoard.setValue(3, 'X');
-	testBoard.setValue(3, 'O');
-	expect(testBoard.getValue(3)).toBe('X');
-});
 
 test("Check if board is filled out", () => {
 	const testBoard = new Board();
@@ -51,13 +45,13 @@ test("Check if board is filled out", () => {
 
 test("Check if unused area is avalible", () => {
 	const testBoard = new Board();
-	expect(testBoard.isAvalible(0)).toBe(true);
+	expect(testBoard.isAvailable(0)).toBe(true);
 });
 
 test("Check if used area is avalible", () => {
 	const testBoard = new Board();
 	testBoard.setValue(0, 'X');
-	expect(testBoard.isAvalible(0)).toBe(false);
+	expect(testBoard.isAvailable(0)).toBe(false);
 });
 
 test("Check if horizontal lines produce a winning trio", () => {

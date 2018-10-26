@@ -56,11 +56,12 @@ Deployment and pipeline tools
 There's two ways to build our project
 
 - Running a production-like server
-- - run `npm start`
-- - open `localhost:8080` in a browser of your choice
+1. run `npm run build`
+2. run `npm start`
+3. open `localhost:8080` in a browser of your choice
 
 - Running a development server
-- - run `npm dev-server`
+1. run `npm dev-server`
 
 
 ### Running the tests

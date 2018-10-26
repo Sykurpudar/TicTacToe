@@ -28,9 +28,13 @@ class Board{
 		this.grid[location] = value;
 	}
 
-	draw(location, value) {
-		console.log("printing out value: ----------" + value);
-		document.getElementById(location).innerHTML = toString(value);
+	updateBoard(location, value) {
+		//console.log("printing out value: ----------" + value);
+		//for(var i = 0; i < this.grid.length; i++) {
+			//document.getElementById(i).innerHTML = toString('X');
+			document.getElementById(location).innerHTML = value;
+		//}
+		
 	}
 
 	isAvailable(location){
@@ -47,7 +51,7 @@ class Board{
 		for (var i = this.winningTrios.length - 1; i >= 0; i--) {
 			var trio = this.winningTrios[i]
 			if(	this.grid[trio[0]] === this.grid[trio[1]] && this.grid[trio[0]] === this.grid[trio[2]]){
-				if(this.grid[trio[0]] == "")	{
+				if(this.grid[trio[0]] === "")	{
 					//Continue with for loop
 				}
 				else {

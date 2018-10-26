@@ -26,7 +26,6 @@ test("Insert value O at location 0 and check value", () => {
 	expect(testBoard.getValue(0)).toBe('O');
 });
 
-
 test("Check if board is filled out", () => {
 	const testBoard = new Board();
 	for(var i = 0; i < 9; i++){

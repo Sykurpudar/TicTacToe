@@ -29,12 +29,7 @@ class Board{
 	}
 
 	updateBoard(location, value) {
-		//console.log("printing out value: ----------" + value);
-		//for(var i = 0; i < this.grid.length; i++) {
-			//document.getElementById(i).innerHTML = toString('X');
-			document.getElementById(location).innerHTML = value;
-		//}
-		
+		document.getElementById(location).innerHTML = value;		
 	}
 
 	isAvailable(location){

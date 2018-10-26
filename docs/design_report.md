@@ -1,54 +1,23 @@
 # Design Report
 Document describing the initial design.
 
-## Header 2
-### Header 3
-Text
-- bullet point
+## Introduction
+This is a simple implementation of the well known game TicTacToe. 
+It is a part of Late-term Assignment in the class SC-T-303-HUGB at the Computer Science Department at Reykjavík University. 
+The focus of this project is to learn the best practices of a source control system and use different tools to use test driven development, continuous integration and development.
+
+## The system
+
+This system is a simple game of the well known game TicTacToe. 
+The game is a great way to spend time and challenge your friends.
+The user group is very large as everyone can have fun playing TicTacToe from a very young age!
 
 
-This is an [example of how a link appears][Example link] in the text.
+## The design 
+
+The game was designed to be very simple and easy to navigate.
+In the class diagram in figure 1 all classes of the system are demonstrated with their attributes and functions.
+The focus of the design was that the code should be very clear and loosely coupled.
 
 
-[Example link]: https://www.google.com/
-
-
-
----
-Markdown example from [Wikipedia][wiki]
-
-[wiki]: https://en.wikipedia.org/wiki/Markdown/
-
-
-Paragraphs are separated
-by a blank line.
-
-Two spaces at the end of a line  
-produces a line break.
-
-Text attributes _italic_, 
-**bold**, `monospace`.
-
-Horizontal rule:
-
----
-
-Bullet list:
-
-- apples
-- oranges
-- pears
-
-Numbered list:
-
-1. wash
-2. rinse
-3. repeat
-
-A [link][example].
-
-[example]: http://example.com
-
-![Image](Image_icon.png "icon")
-
-> Markdown uses email-style > characters for blockquoting.
+![Image](tictactoeclassdiagram.png "klasarit")

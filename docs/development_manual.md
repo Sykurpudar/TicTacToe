@@ -1,29 +1,88 @@
 # Development Manual
-What is needed and how to get the project to build on a fresh machine, 
-Source control client and access to source control Build environment, 
-Other necessary dependencies for development.
 
-// CHANGE THIS
+Welcome!
+
+If you're reading this, you wan't to contribute to this Marshmallow TicTacToe.
+
+This manual describes what you'll need to get the project to build on a fresh machine so that you can start coding.
+
 
 ## Getting started
+
+First we'll introduce all package prerequisites needed for development and deployment
+
 ### Prerequisites
+
+You'll need the following packages to build. Installation instructions are in the next part.
+
+Boilerplate build tools and script management
+- Node.js
 - [NPM][npm] version 6.4.1+ (could work on older, but not tested)
 
-// ADD EVERYTHING THAT NEEDS TO BE INSTALLED, FOR EXAMPLE WEBPACK, DEV-SERVER, ETC.
+Web request management
+- Express
+
+Packaging tools
+- Webpack
+- Webpack-CLI
+- Webpack-Dev-Server
+- HTML-Webpack-Plugin
+- Clean-Webpack-Plugin
+- CSS-loader
+- Lodash NOT BEING USED
+
+Test frameworks
+- Jest
+
+- Puppeteer
+
+Continuous Pipeline
+- GitHub
+- CircleCI
+- [Heroku][heroku]
+
+- We
+- Might
+- Be
+- Missing
+- Something
+
 
 ### Installing
-After cloning the repo, run `npm install` in the project directory.
 
-- `git clone https://github.com/Sykurpudar/TicTacToe.git; cd TicTacToe; npm install`
+Now you're ready to install everything needed. Great!
 
-// ADD EVERYTHING THAT NEEDS TO BE INSTALLED, FOR EXAMPLE WEBPACK, DEV-SERVER, ETC.
+Build Tools
 
-// HEROKU, CIRCLECI, ETC?
+1. [Clone][cloning] the [repo][repo]
+   `git clone https://github.com/Sykurpudar/TicTacToe.git;`
+2. Make sure you have [node.js][node] installed
+3. Make sure you have [npm][npm] installed
+4. Move to the project directory `cd TicTacToe`
+   and run `npm install`
+   - NPM should detect the package.lock.json file and install all needed dependancies described above
+5. Now you're ready to build. If errors appear in the build process, some dependancy may be missing
 
-// CHANGE EVERYTHING BELOW HERE!
+Deployment and pipeline tools
+1. Install [Heroku][heroku]
+2. This stuff is only applicaple to us, with privileges
+
+
+### Building
+
+There's two ways to build our project
+
+- Running a production-like server
+- - run `npm start`
+
+- Running a development server
+- - run `npm dev-server`
+
 
 ### Running the tests
 This repository uses the [Jest][jest] testing framework and the [Puppeteer][puppeteer] library for writing automated acceptance tests for services.
+
+Running all tests for both frameworks can be done with `npm test`
 
 ### Writing tests
 - Test files are located under the `src/logic/` folder.
@@ -32,8 +91,11 @@ This repository uses the [Jest][jest] testing framework and the [Puppeteer][pupp
 - [12 example usages of Puppeteer][12examples]
 - Behavior driven development with [Cucumber and Puppeteer][cucumber]
 
+For comments, inquiries or suggestions, contact hrefna17@ru.is
+
 [12examples]: https://www.aymen-loukil.com/en/blog-en/google-puppeteer-tutorial-with-examples/
 [cucumber]: https://www.aymen-loukil.com/en/blog-en/google-puppeteer-tutorial-with-examples/
 [jest]: https://jestjs.io/
 [npm]: https://www.npmjs.com/
 [puppeteer]: https://github.com/GoogleChrome/puppeteer
+[heroku]: https://www.heroku.com/

@@ -4,6 +4,9 @@
   width: 100px;
   height: 80px;
   float: left;
+  text-align: center;
+  font-size: 60px;
+  font-weight: lighter;
   padding-top: 20px;
 }
 

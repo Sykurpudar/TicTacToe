@@ -12,6 +12,7 @@ function getHTMLgrid() {
 	Main function for our game logic
 */
 const currentGame = new Game('X','O');
+var message = document.getElementsByClassName("message");
 
 var squares = getHTMLgrid();
 var getMove = function() {
@@ -25,11 +26,19 @@ var getMove = function() {
 			if(player == "X"){
 				currentGame.scoreBoard.incrementX();
 				document.getElementById("scorex").innerHTML = currentGame.scoreBoard.getXPoints();
+				message[0].innerHTML = "X Won!";
 			}
 			else{
 				currentGame.scoreBoard.incrementO();
 				document.getElementById("scoreo").innerHTML = currentGame.scoreBoard.getOPoints();
+				message[0].innerHTML = "O Won!";
 			}
+		}
+		else if(currentGame.checkForDraw()){
+			message[0].innerHTML = "Draw!";
+		}
+		else{
+			message[0].innerHTML = currentGame.getCurrentPlayer() + ", it is your turn!";
 		}
 	}
 };
@@ -41,6 +50,7 @@ for (var i = 0; i < squares.length; i++) {
 document.getElementById("play-again").onclick = function () {
 	currentGame.board.clearBoard();
 	currentGame.board.clearHTMLBoard();
+	message[0].innerHTML = currentGame.getCurrentPlayer() + ", it is your turn!"
 }
 
 

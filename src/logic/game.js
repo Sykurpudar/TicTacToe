@@ -50,7 +50,7 @@ class Game {
 	}
 
 	checkForDraw() { // checks if round = 9 and if there is no winner, then there is a draw
-		if((this.round === 9) && (this.board.hasWinningTrio() === false)) {
+		if((this.board.isFull()) && (this.board.hasWinningTrio() === false)) {
 			return true;
 		}
 		return false;

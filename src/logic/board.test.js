@@ -100,3 +100,13 @@ test("Check if has winning trio returns false when grid contains empty lines", (
 	testBoard.setValue(2, 'X');
 	expect(testBoard.hasWinningTrio()).toBe(false);
 });
+
+test("Check if board is cleared", () => {
+	const testBoard = new Board();
+	var grid = ['','','','','','','','',''];
+	testBoard.setValue(0, 'X');
+	testBoard.setValue(1, 'O');
+	testBoard.setValue(2, 'X');
+	testBoard.clearBoard();
+	expect(testBoard.grid).toEqual(grid);
+});

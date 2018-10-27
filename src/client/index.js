@@ -38,6 +38,13 @@ for (var i = 0; i < squares.length; i++) {
 	squares[i].addEventListener('click', getMove, false);
 }
 
+document.getElementById("play-again").onclick = function () {
+	currentGame.board.clearBoard();
+	currentGame.board.clearHTMLBoard();
+}
+
+
+
 /*
 var x = document.getElementsByClassName("example");
 var i;

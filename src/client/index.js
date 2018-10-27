@@ -18,7 +18,7 @@ var getMove = function() {
 	var id = this.getAttribute("id");
 	var player = currentGame.getCurrentPlayer();
 
-	if(currentGame.board.isAvailable(id)) {
+	if(currentGame.board.isAvailable(id) && !currentGame.hasWon() && !currentGame.checkForDraw()) {
 		currentGame.makeMove(id);
 		currentGame.board.updateBoard(id, player);
 	}

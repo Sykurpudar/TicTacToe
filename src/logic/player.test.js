@@ -3,7 +3,6 @@
 
 const Player = require("./player.js");
 
-
 it('Player constructor sets the correct values', () => {
   const obj = new Player('X', 1);
   expect(obj.player).toMatch('X');

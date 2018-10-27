@@ -2,7 +2,7 @@
 "use strict";
 
 class Board{
-	constructor(){
+	constructor() {
 		this.grid = ['','','','','','','','',''];
 
 		this.winningTrios = [
@@ -20,21 +20,20 @@ class Board{
 		  ];
 	}
 
-	getValue(location){
+	getValue(location) {
 		return this.grid[location];
 	}
 
-	setValue(location, value){
+	setValue(location, value) {
 		this.grid[location] = value;
 	}
 
-	draw(location, value) {
-		console.log("printing out value: ----------" + value);
-		document.getElementById(location).innerHTML = toString(value);
+	updateBoard(location, value) { // updates actual board on 'site'
+		document.getElementById(location).innerHTML = value;
 	}
 
-	isAvailable(location){
-		if(this.grid[location] === ''){
+	isAvailable(location) {
+		if(this.grid[location] === '') {
 			return true;
 		}
 		else{
@@ -42,12 +41,11 @@ class Board{
 		}
 	}
 
-	hasWinningTrio(){
-
+	hasWinningTrio() {
 		for (var i = this.winningTrios.length - 1; i >= 0; i--) {
 			var trio = this.winningTrios[i]
-			if(	this.grid[trio[0]] === this.grid[trio[1]] && this.grid[trio[0]] === this.grid[trio[2]]){
-				if(this.grid[trio[0]] == "")	{
+			if(this.grid[trio[0]] === this.grid[trio[1]] && this.grid[trio[0]] === this.grid[trio[2]]) {
+				if(this.grid[trio[0]] === "") {
 					//Continue with for loop
 				}
 				else {
@@ -58,14 +56,24 @@ class Board{
 		return false;
 	}
 
-	isFull(){
+	clearBoard() {
+		this.grid = ['','','','','','','','',''];
+	}
+
+	clearHTMLBoard() {
 		for(var i = 0; i < 9; i++){
-			if(this.getValue(i) === ''){
+			document.getElementById(i).innerHTML = '';
+		}
+	}
+/*
+	isFull() {
+		for(var i = 0; i < 9; i++) {
+			if(this.getValue(i) === '') {
 				return false;
 			}
 		}
 		return true;
-	}
+	}*/
 }
 
 module.exports = Board;

@@ -3,6 +3,7 @@
 
 const Player = require("./player.js");
 const Board = require("./board.js");
+const ScoreBoard = require("./scoreBoard.js");
 
 class Game {
 
@@ -10,6 +11,7 @@ class Game {
 		this.playerX = new Player();
 		this.playerO = new Player();
 		this.board = new Board();
+		this.scoreBoard = new ScoreBoard();
 		this.round = 0; // game starts with round = 0 and ends in round = 9
 	}
 

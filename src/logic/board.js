@@ -65,7 +65,7 @@ class Board{
 			document.getElementById(i).innerHTML = '';
 		}
 	}
-/*
+
 	isFull() {
 		for(var i = 0; i < 9; i++) {
 			if(this.getValue(i) === '') {
@@ -73,7 +73,7 @@ class Board{
 			}
 		}
 		return true;
-	}*/
+	}
 }
 
 module.exports = Board;

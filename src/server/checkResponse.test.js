@@ -6,13 +6,14 @@ describe("TicTacToe", () => {
   let url = "http://sykurflautur.herokuapp.com";
 
   beforeEach(async () => {
-    browser = await puppeteer.launch({ headless: true, slowMo: 0 });
+    browser = await puppeteer.launch({ headless: false, slowMo: 0 });
     page = await browser.newPage();
   });
 
   afterEach(() => {
     browser.close();
   });
+  /*
 
   test("Server responds with 200 status code", async () => {
     const response = await page.goto(url);
@@ -27,22 +28,17 @@ describe("TicTacToe", () => {
     expect(pageTitle).toBe("Greeting page");
   });
 
+  */
   
   test("Clicking top left square puts an X in it", async () => {
     await page.goto(url);
     let response = await page.goto(url);
 
-    await page.click('.square');
-
-
-    //const inputElement = await page.$('input[type=submit]');
-    //await inputElement.click(); //3
-    //await page.waitForNavigation({waitUntil: 'load'}); //4
+    await page.click('.top.right');
 
     const pageTitle = await page.title();
-   // expect(pageTitle).toBe("puppeteer api - Google Search");
 
-   const inner_html = await ( await ( await page.$( '.square' ) ).getProperty( 'innerHTML' ) ).jsonValue();
+   const inner_html = await ( await ( await page.$( '.top.right' ) ).getProperty( 'innerHTML' ) ).jsonValue();
   
    expect(inner_html).toBe("X");
 

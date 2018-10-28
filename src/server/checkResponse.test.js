@@ -1,5 +1,4 @@
 const puppeteer = require("puppeteer");
-const NotImplementedError = require("./NotImplemented");
 
 describe("TicTacToe", () => {
   let browser, page;
@@ -12,8 +11,7 @@ describe("TicTacToe", () => {
 
   afterEach(() => {
     browser.close();
-  });
-  
+  });  
 
   test("Server responds with 200 status code", async () => {
     const response = await page.goto(url);
@@ -66,8 +64,5 @@ describe("TicTacToe", () => {
     expect(inner_html).toBe("");
 
   });
-
-
-
 
 });

@@ -23,9 +23,8 @@ describe("TicTacToe", () => {
 
   test("Page title is 'Greeting page'", async () => {
     const response = await page.goto(url);
-    // Check that the page title is "Google"
     const pageTitle = await page.title(url);
-    expect(pageTitle).toBe("Greeting page");
+    expect(pageTitle).toBe("TicTacToe");
   });
 
   test("Clicking top left square puts an X in it", async () => {

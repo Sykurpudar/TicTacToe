@@ -26,4 +26,25 @@ describe("Google.com", () => {
     const pageTitle = await page.title(url);
     expect(pageTitle).toBe("Greeting page");
   });
+
+  
+  test("Clicking top left square puts an X in it", async () => {
+    await page.goto(url);
+    let response = await page.goto(url);
+
+    await page.click('.square');
+
+
+    //const inputElement = await page.$('input[type=submit]');
+    //await inputElement.click(); //3
+    //await page.waitForNavigation({waitUntil: 'load'}); //4
+
+    const pageTitle = await page.title();
+   // expect(pageTitle).toBe("puppeteer api - Google Search");
+
+   const inner_html = await ( await ( await page.$( '.square' ) ).getProperty( 'innerHTML' ) ).jsonValue();
+  
+   expect(inner_html).toBe("X");
+
+  });
 });

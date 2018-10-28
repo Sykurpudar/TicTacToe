@@ -47,6 +47,9 @@ jobs:
           # Store those artifacts in circleci artifacts
       - store_artifacts:
           path: ./artifacts
+      - run:
+          name: send test results to sykur-testresults
+          command: cd testData/lcov-report && git config --global user.email "hrefna17@ru.is" && git config --global user.name "KodingKin" && git init && git add . && git commit -m "required text" && git push --set-upstream -f https://heroku:2d2c52ee-bcb0-4661-ba10-f3fd959ddd38@git.heroku.com/sykur-testresults.git master
 
   deploy-production:
     docker:

@@ -8,7 +8,8 @@
     "heroku-postbuild": "webpack -p",
     "start": "node server",
     "test": "jest",
-    "dev-server": "webpack-dev-server --open"
+    "dev-server": "webpack-dev-server --open",
+    "convert": "node ./docs/toPdf"
   },
   "jest": {
     "verbose": true,
@@ -36,7 +37,8 @@
     "webpack-dev-server": "^3.1.10"
   },
   "dependencies": {
-    "express": "^4.16.4"
+    "express": "^4.16.4",
+    "markdown-pdf": "^9.0.0"
   },
   "description": ""
 }

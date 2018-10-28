@@ -71,7 +71,6 @@ test("Make sure a certain board does not produce a winningTrio", () => {
 	expect(testBoard.hasWinningTrio()).toBe(false);
 });
 
-
 test("Check if vertical lines produce a winning trio", () => {
 	const testBoard = new Board();
 	testBoard.setValue(1, 'X');

@@ -20,19 +20,19 @@ class Board{
 		  ];
 	}
 
-	getValue(location) {
+	getValue(location) { // Returns what is in the grid at the location(index)
 		return this.grid[location];
 	}
 
-	setValue(location, value) {
+	setValue(location, value) { // Sets what is in the grid at the location(index)
 		this.grid[location] = value;
 	}
 
-	updateBoard(location, value) { // updates actual board on 'site'
+	updateBoard(location, value) { // Updates the value in the html square
 		document.getElementById(location).innerHTML = value;
 	}
 
-	isAvailable(location) {
+	isAvailable(location) { // Returns if grid at location is empty/available
 		if(this.grid[location] === '') {
 			return true;
 		}
@@ -41,32 +41,33 @@ class Board{
 		}
 	}
 
-	hasWinningTrio() {
+	hasWinningTrio() { // Returns true if someone has won
 		for (var i = this.winningTrios.length - 1; i >= 0; i--) {
-			var trio = this.winningTrios[i]
+			var trio = this.winningTrios[i]; 
+			// Checks if all values in grid, of the same indexes in winning trio, are the same
 			if(this.grid[trio[0]] === this.grid[trio[1]] && this.grid[trio[0]] === this.grid[trio[2]]) {
 				if(this.grid[trio[0]] === "") {
-					//Continue with for loop
+					//Continue with for loop if the values are empty strings
 				}
 				else {
-					return true;
+					return true; // Else it is X or O so we have a winner!
 				}
 			}
 		}
 		return false;
 	}
 
-	clearBoard() {
-		this.grid = ['','','','','','','','',''];
+	clearBoard() { // Ereases values in board
+		this.grid = ['','','','','','','','','']; 
 	}
 
-	clearHTMLBoard() {
+	clearHTMLBoard() { // Ereases values in html square
 		for(var i = 0; i < 9; i++){
 			document.getElementById(i).innerHTML = '';
 		}
 	}
 
-	isFull() {
+	isFull() { // returns if grid has no empty string
 		for(var i = 0; i < 9; i++) {
 			if(this.getValue(i) === '') {
 				return false;

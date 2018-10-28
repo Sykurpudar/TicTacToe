@@ -2,8 +2,8 @@
 "use strict";
 
 class ScoreBoard {
-	constructor()
-	{
+	// Scoreboard to keep scores for X and O while they play TicTacToe
+	constructor() {
 		this.xPoints = 0;
 		this.oPoints = 0;
 	}

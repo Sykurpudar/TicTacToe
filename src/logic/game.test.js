@@ -57,7 +57,7 @@ test("Checks if games dose not end in draw", () => {
 test("Checks if game ends in draw", () => {
 	const testGame = new Game();
 	testGame.makeMove(2);
-  testGame.makeMove(1);
+ 	testGame.makeMove(1);
 	testGame.makeMove(4);
 	testGame.makeMove(0);
 	testGame.makeMove(8);

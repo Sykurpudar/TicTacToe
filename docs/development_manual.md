@@ -1,10 +1,12 @@
 # Development Manual
 
 Welcome!
-If you're reading this, you want to contribute to this Marshmallow TicTacToe.  
+If you're reading this, you want to contribute to this TicTacToe project by Sykurpudar.  
 This manual describes what you'll need to do in order to get the project to build on a fresh machine so that you can start coding.  
+
 ## Getting started
 First we'll introduce all package prerequisites needed for development and deployment.
+
 ### Prerequisites
 You'll need the following packages to build. Installation instructions are in the next part.  
 
@@ -71,9 +73,25 @@ Running all tests for both frameworks can be done with `npm test`
 This automatically creates a fresh code coverage test report, saved in `public/testResults/lcov-report/`
 It is visible via the url `localhost:8080/test` if the server is running.
 
+### Branching
+When making changes to the code, a development branch must be created for that functionality.
+To switch to a development branch, use the command `git checkout -b "name_of_dev_branch`
+To switch back to the master branch, use the command `git checkout master`
+To delete a branch, use the command `git branch -d name_of_dev_branch`
+
 ### Writing tests
 - Test files for game logic are located under the `src/logic/` folder.
 - Test files for Puppeteer are located under the `src/server/` folder.
+
+Code pushed to GitHub will be inspected by [CircleCI][circleci] using the written tests.
+
+### Deploying
+Pushes to the repository's master branch will be automatically deployed by Heroku to the [TicTacToe website][tictactoe].
+
+## Team protocol
+All changes to the code must be pushed to a development branch.
+When ready to merge with the master branch, a pull request must be opened and another member of the team reviews it and either merges it or closes the request if the commits are inadequate.
+A pull request may only be merged to master branch if all CircleCI tests pass.
 
 ## Additional resources
 - [12 example usages of Puppeteer][12examples]
@@ -92,5 +110,6 @@ For comments, inquiries or suggestions, contact thorduratl17@ru.is
 [express]: https://expressjs.com/
 [webpack]: https://webpack.js.org/
 [css-loader]: https://github.com/webpack-contrib/css-loader 
+[tictactoe]: https://sykurflautur.herokuapp.com/
 [12examples]: https://www.aymen-loukil.com/en/blog-en/google-puppeteer-tutorial-with-examples/
 [herokudeploy]: https://devcenter.heroku.com/articles/github-integration

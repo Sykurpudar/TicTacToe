@@ -36,7 +36,7 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(pathsToClean, cleanOptions),
     new HtmlWebpackPlugin({
-        title: 'Greeting page',
+        title: 'TicTacToe',
         template : 'src/client/index.html'
     })
   ],

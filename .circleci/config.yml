@@ -44,7 +44,7 @@ jobs:
         
   test:
     docker: #hvað er docker?
-      - image: circleci/node:7.10
+      - image: circleci/node:latest-browsers
 
     working_directory: ~/repo
 
@@ -81,7 +81,7 @@ jobs:
         command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_PRODUCTION_APP.git
 
 
-        
+
 workflows:
   version: 2
   workflow:

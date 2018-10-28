@@ -27,7 +27,7 @@ describe("TicTacToe", () => {
     expect(pageTitle).toBe("TicTacToe");
   });
 
-  test("Clicking top left square puts an X in it", async () => {
+  test("Clicking top right square puts an X in it", async () => {
     await page.goto(url);
     let response = await page.goto(url);
     await page.click('.top.right');

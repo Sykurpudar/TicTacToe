@@ -1,12 +1,12 @@
 const puppeteer = require("puppeteer");
 const NotImplementedError = require("./NotImplemented");
 
-describe("Google.com", () => {
+describe("TicTacToe", () => {
   let browser, page;
   let url = "http://sykurflautur.herokuapp.com";
 
   beforeEach(async () => {
-    browser = await puppeteer.launch({ headless: false, slowMo: 0 });
+    browser = await puppeteer.launch({ headless: true, slowMo: 0 });
     page = await browser.newPage();
   });
 

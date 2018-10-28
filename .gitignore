@@ -7,3 +7,16 @@
 /public/testResults/
 /public/index.html
 /public/main.js
+
+
+clover.xml
+coverage-final.json
+lcov.info
+index.html
+logic/
+prettify.css
+prettify.js
+server/
+server.js
+sort-arrow-sprite.png
+sorter.js

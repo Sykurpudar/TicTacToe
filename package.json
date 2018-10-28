@@ -14,7 +14,7 @@
   "jest": {
     "verbose": true,
     "collectCoverage": true,
-    "coverageDirectory": "./public/testResults/"
+    "coverageDirectory": "./testData/"
   },
   "repository": {
     "type": "git",

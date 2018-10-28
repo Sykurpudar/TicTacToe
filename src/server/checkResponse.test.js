@@ -11,7 +11,7 @@ describe("TicTacToe", () => {
   });
 
   afterEach(() => {
-    //browser.close();
+    browser.close();
   });
   
 

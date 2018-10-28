@@ -21,7 +21,7 @@ describe("TicTacToe", () => {
     expect(response._status).toBe(200);
   });
 
-  test("Page title is 'Greeting page'", async () => {
+  test("Page title is TicTacToe", async () => {
     const response = await page.goto(url);
     const pageTitle = await page.title(url);
     expect(pageTitle).toBe("TicTacToe");

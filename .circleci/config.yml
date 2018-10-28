@@ -77,8 +77,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Deploy to production on Heroku
-        command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_PRODUCTION_APP.git
+          name: Deploy to production on Heroku
+          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_PRODUCTION_APP.git
 
 
 

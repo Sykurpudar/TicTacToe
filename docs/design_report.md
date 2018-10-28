@@ -30,5 +30,6 @@ On the page there is also a button for the players to start a new game.
 In image 2 is a simple prototype of the user interface:
 
 ![Image](./tictactoeprototype.png "tictactoeprototype") 
+*Image 2: A prototype for the user interface.*
 
 

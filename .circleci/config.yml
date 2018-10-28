@@ -35,3 +35,7 @@ jobs:
         
       # run tests!
       - run: yarn test
+      - run: 
+          name: Convert to pdf
+          command: node toPDF.js
+

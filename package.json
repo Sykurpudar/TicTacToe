@@ -38,7 +38,8 @@
   },
   "dependencies": {
     "express": "^4.16.4",
-    "markdown-pdf": "^9.0.0"
+    "markdown-pdf": "^9.0.0",
+    "puppeteer": "^1.9.0"
   },
   "description": ""
 }

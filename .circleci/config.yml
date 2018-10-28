@@ -7,12 +7,7 @@ jobs:
   build:
     docker:
       # specify the version you desire here
-      - image: circleci/node:latest-browsers
-      
-      # Specify service dependencies here if necessary
-      # CircleCI maintains a library of pre-built images
-      # documented at https://circleci.com/docs/2.0/circleci-images/
-      # - image: circleci/mongo:3.4.4
+      - image: circleci/node:7.10
 
     working_directory: ~/repo
 
@@ -26,12 +21,59 @@ jobs:
           # fallback to using the latest cache if no exact match is found
           - v1-dependencies-
 
-      - run: yarn install
+      - run: npm install
 
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
         
+      
+  deploy-staging:
+    docker: #hvað er docker?
+      - image: circleci/node:7.10
+
+    working_directory: ~/repo
+    
+    steps:
+      - checkout
+      - run: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_STAGING_APP.git
+        #name: Deploy to Staging
+        #command: git push https://heroku:sykur-staging@git.heroku.com/sykur-staging.git
+
+        
+  test:
+    docker: #hvað er docker?
+      - image: circleci/node:7.10
+
+    working_directory: ~/repo
+    steps:
       # run tests!
-      - run: yarn test
+      - run: npm test
+
+  deploy-production:
+    docker: #hvað er docker?
+      - image: circleci/node:7.10
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run:
+        name: Deploy to production on Heroku
+        command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_PRODUCTION_APP.git
+workflows:
+  version: 2
+  workflow:
+    jobs:
+      - build
+      - deploy-staging:
+          requires:
+            - build
+      - test:
+          requires:
+            - deploy-staging
+      - deploy-production:
+          requires:
+            - test
+
+  

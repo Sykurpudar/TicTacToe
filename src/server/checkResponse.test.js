@@ -3,7 +3,7 @@ const NotImplementedError = require("./NotImplemented");
 
 describe("TicTacToe", () => {
   let browser, page;
-  let url = "http://sykurflautur.herokuapp.com";
+  let url = "http://sykur-staging.herokuapp.com";
 
   beforeEach(async () => {
     browser = await puppeteer.launch({ headless: true, slowMo: 0 });

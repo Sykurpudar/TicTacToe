@@ -17,6 +17,6 @@ logic/
 prettify.css
 prettify.js
 server/
-server.js
+base.css
 sort-arrow-sprite.png
 sorter.js

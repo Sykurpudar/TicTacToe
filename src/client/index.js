@@ -11,7 +11,7 @@ function getHTMLgrid() {
 /*
 	Main function for our game logic
 */
-const currentGame = new Game('X','O'); // Initialize new game
+const currentGame = new Game(); // Initialize new game
 var message = document.getElementsByClassName("message");
 var squares = getHTMLgrid(); // Our board
 

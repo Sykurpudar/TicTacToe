@@ -17,29 +17,30 @@ This manual describes what you'll need to build the project and run it on a fres
 ## Getting started
 First we'll introduce all package prerequisites needed for deployment  
 ### Prerequisites
-TYPE A
+
+#### TYPE A
 You'll need the following packages to run game. Installation instructions are in the next part.  
-TYPE B
+#### TYPE B
 You'll need the following packages to build and run the game. Installation instructions are in the next part.  
 
-TYPE A
+#### TYPE A
 Boilerplate build tools and script management
-- [Node.js][node]
-- [NPM][npm] version 6.4.1+ (could work on older, but not tested)
+- [Node.js](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/) version 6.4.1+ (could work on older, but not tested)
 
 Web request management
-- [Express][express]
+- [Express](https://expressjs.com/)
 
-TYPE B
+#### TYPE B
 Boilerplate build tools and script management
-- [Node.js][node]
-- [NPM][npm] version 6.4.1+ (could work on older, but not tested)
+- [Node.js](https://nodejs.org/en/)
+- [NPM](https://www.npmjs.com/) version 6.4.1+ (could work on older, but not tested)
 
 Web request management
-- [Express][express]
+- [Express](https://expressjs.com/)
 
 Packaging tools
-- [Webpack][webpack] along with:
+- [Webpack](https://webpack.js.org/) along with:
 - - Webpack-CLI
 - - Webpack-Dev-Server
 - - HTML-Webpack-Plugin

@@ -65,10 +65,7 @@ workflows:
   version: 2
   workflow:
     jobs:
-      - build
-      - deploy-staging:
-          requires:
-            - build
+      - deploy-staging
       - test:
           requires:
             - deploy-staging

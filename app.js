@@ -12,7 +12,7 @@ app.use("/api", api);
 app.use(express.static(__dirname +'/public/'));
 
 app.get("/test/", (req, res) => {
-  res.redirect('/testResults/lcov-report/index.html');
+  res.redirect('https://sykur-testresults.herokuapp.com/');
 });
 
 

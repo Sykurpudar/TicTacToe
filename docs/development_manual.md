@@ -114,6 +114,6 @@ For comments, inquiries or suggestions, contact thorduratl17@ru.is
 [css-loader]: https://github.com/webpack-contrib/css-loader 
 [stagingserver]: https://sykur-staging.herokuapp.com/
 [tictactoe]: http://sykur-production.herokuapp.com/
-[testresults]: sykur-testresults.herokuapp.com
+[testresults]: http://sykur-testresults.herokuapp.com
 [12examples]: https://www.aymen-loukil.com/en/blog-en/google-puppeteer-tutorial-with-examples/
 [herokudeploy]: https://devcenter.heroku.com/articles/github-integration

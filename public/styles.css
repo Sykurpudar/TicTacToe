@@ -1,5 +1,10 @@
+/*
+  Webpack gave us a hard time integrating css into the build process.
+  Neither copying the css file into our public folder nor injecting css into
+  the html template was supported by webpack.
 
-
+  We got no help in excerice class for this issue. Therefore the css file is left here for production
+*/
 .square {
   width: 100px;
   height: 80px;

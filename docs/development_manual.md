@@ -10,14 +10,14 @@ First we'll introduce all package prerequisites needed for development and deplo
 ### Prerequisites
 You'll need the following packages to build. Installation instructions are in the next part.  
 
-Boilerplate build tools and script management
+#### Boilerplate build tools and script management
 - [Node.js][node]
 - [NPM][npm] version 6.4.1+ (could work on older, but not tested)
 
-Web request management
+#### Web request management
 - [Express][express]
 
-Packaging tools
+#### Packaging tools
 - [Webpack][webpack] along with:
 - - Webpack-CLI
 - - Webpack-Dev-Server
@@ -25,11 +25,11 @@ Packaging tools
 - - Clean-Webpack-Plugin
 - [CSS-loader][css-loader]
 
-Test frameworks
+#### Test frameworks
 - [Jest][jest]
 - [Puppeteer][puppeteer]
 
-Continuous Pipeline
+#### Continuous Pipeline
 - [GitHub][github]
 - [CircleCI][circleci]
 - [Heroku][heroku]
@@ -39,7 +39,7 @@ Continuous Pipeline
 
 Now you're ready to install everything needed. Great!
 
-Build Tools
+#### Build Tools
 
 1. Clone the repo `git clone https://github.com/Sykurpudar/TicTacToe.git;`
 2. Make sure you have [node.js][node] installed
@@ -48,9 +48,10 @@ Build Tools
    - NPM should detect the package.lock.json file and install all needed dependencies described above
 5. Now you're ready to build. If errors appear in the build process, some dependency may be missing.
 
-Deployment and pipeline tools
+#### Deployment and pipeline tools
 1. Install [Heroku][heroku]
-2. This step is only applicable to those with privileges. Please contact the owner of the Heroku app if you don't have access.
+- This step is only applicable to those with privileges. Please contact the owner of the Heroku app if you don't have access.
+2. Set up a [CircleCI][circleci] account.
 
 
 ### Building
@@ -86,7 +87,8 @@ To delete a branch, use the command `git branch -d name_of_dev_branch`
 Code pushed to GitHub will be inspected by [CircleCI][circleci] using the written tests.
 
 ### Deploying
-Pushes to the repository's master branch will be automatically deployed by Heroku to the [TicTacToe website][tictactoe].
+CircleCI will run end-to-end tests on a [staging server][stagingserver] using Heroku. If the tests pass, CircleCI will deploy to the [TicTacToe production server][tictactoe].
+Code coverage is available at a [test result server][testresults] which will update regardless of whether the tests pass or not.
 
 ## Team protocol
 All changes to the code must be pushed to a development branch.
@@ -110,6 +112,8 @@ For comments, inquiries or suggestions, contact thorduratl17@ru.is
 [express]: https://expressjs.com/
 [webpack]: https://webpack.js.org/
 [css-loader]: https://github.com/webpack-contrib/css-loader 
-[tictactoe]: https://sykurflautur.herokuapp.com/
+[stagingserver]: https://sykur-staging.herokuapp.com/
+[tictactoe]: http://sykur-production.herokuapp.com/
+[testresults]: sykur-testresults.herokuapp.com
 [12examples]: https://www.aymen-loukil.com/en/blog-en/google-puppeteer-tutorial-with-examples/
 [herokudeploy]: https://devcenter.heroku.com/articles/github-integration

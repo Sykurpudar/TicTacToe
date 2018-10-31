@@ -3,18 +3,18 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2
-jobs:      
+jobs:
   deploy-staging:
-    docker: 
+    docker:
       - image: circleci/node:7.10
 
-    
+
     steps:
       - checkout
-      - run: 
+      - run:
           name: Deploy to Staging
-          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_STAGING_APP.git
-        
+          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_STAGING_APP.git master
+
   test:
     docker:
       - image: circleci/node:latest-browsers
@@ -37,13 +37,13 @@ jobs:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-        
+
       - run: npm test
           # Run scripts that converts .md documentation files to .pdf
-      - run: 
+      - run:
           name: Convert to pdf
           command: node toPDF.js
-          
+
           # Store those artifacts in circleci artifacts
       - store_artifacts:
           path: ./artifacts
@@ -60,7 +60,7 @@ jobs:
       - checkout
       - run:
           name: Deploy to production on Heroku
-          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_PRODUCTION_APP.git
+          command: git push https://heroku:$HEROKU_API_KEY@git.heroku.com/$HEROKU_PRODUCTION_APP.git master
 
 
 

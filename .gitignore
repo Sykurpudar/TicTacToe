@@ -12,11 +12,11 @@
 clover.xml
 coverage-final.json
 lcov.info
-index.html
-logic/
+/testData/lcov-report/index.html
+/testData/lcov-report/logic/
 prettify.css
 prettify.js
-server/
+/testData/lcov-report/server/
 base.css
 sort-arrow-sprite.png
 sorter.js
